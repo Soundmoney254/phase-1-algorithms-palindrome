@@ -1,5 +1,11 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+let reversedWord = word.split("").reverse().join("");
+if (word === reversedWord){
+  return true
+}
+else {
+  return false
+}
 }
 
 /* 
@@ -18,8 +24,19 @@ if (require.main === module) {
 
   console.log("");
 
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("madam"));
+
+  console.log("");
+
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  
+  console.log("");
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("phase"));
 }
 
 module.exports = isPalindrome;
